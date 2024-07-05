@@ -1,0 +1,38 @@
+﻿<Window x:Class="archi.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:archi"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="2*"/>
+            <ColumnDefinition Width="3*"/>
+        </Grid.ColumnDefinitions>
+
+        <ListView Name="ProjectDetails" Grid.Column="0" Margin="10">
+            <TextBlock Text="Projects List" />
+            <ListBox x:Name="ProjectsListBox"/>
+        </ListView>
+
+        <StackPanel Grid.Column="1" Margin="10">
+            <TextBlock Text="Add/Update/Delete Project" FontSize="18" FontWeight="DemiBold" Margin="0,0,0,10"/>
+            <TextBlock Text="Project Name"/>
+            <TextBox Name="PjNameTextBox" Margin="0,0,0,10"/>
+            <TextBlock Text="Architect"/>
+            <TextBox Name="ArchitectTextBox" Margin="0,0,0,10"/>
+            <TextBlock Text="Status"/>
+            <TextBox Name="StatusTextBox" Margin="0,0,0,10"/>
+            <TextBlock Text="Finish Date"/>
+            <DatePicker Name="FinishDateTextBox" Margin="0,0,0,10"/>
+
+            <Button Content="Add Project" Click="AddProjectButton_Click" Width="100" Margin="0,0,0,10" HorizontalAlignment="Left"/>
+            <TextBlock Text="ID"/>
+            <TextBox Name="IdTextBox" Margin="0,0,0,10"/>
+            <Button Content="Update Project" Click="UpdateProjectButton_Click" Width="100" Margin="0,0,0,10" HorizontalAlignment="Left"/>
+            <Button Content="Delete Project" Click="DeleteProjectButton_Click" Width="100" Margin="0,0,0,10" HorizontalAlignment="Left"/>
+        </StackPanel>
+    </Grid>
+</Window>
